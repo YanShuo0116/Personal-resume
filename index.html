@@ -1,0 +1,569 @@
+<!doctype html>
+
+<html class="no-js" lang="zh-TW"> 
+    <head>
+        <meta charset="utf-8">
+        <title>陳衍碩的履歷</title>
+        <meta name="description" content="陳衍碩的履歷">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/iconfont.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/bootsnav.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- 修復圖標和進度條樣式 -->
+        <style>
+            /* 統一所有圖標為藍色 */
+            .fa-brands, .fa-solid, .fa, .fas, .fab {
+                color: #4a90e2 !important;
+                font-size: 18px !important;
+                width: 24px !important;
+                text-align: center !important;
+                margin-right: 10px !important;
+            }
+            
+            /* 技能表圖標樣式 */
+            .skills-table td i {
+                color: #4a90e2 !important;
+            }
+            
+            /* 專業領域圖標樣式 */
+            .choose_icon i {
+                font-size: 24px !important;
+                color: #4a90e2 !important;
+                width: auto !important;
+            }
+            
+            /* 修復進度條 */
+            .skills-table .progress {
+                height: 18px !important;
+                border-radius: 9px !important;
+                background-color: #f0f0f0 !important;
+            }
+            
+            .skills-table .progress-bar {
+                background: linear-gradient(to right, #659fd4, #4a90e2) !important;
+                color: #fff !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+        </style>
+
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar-collapse">
+
+
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="culmn">
+
+            <!-- 導航欄 -->
+            <nav class="navbar navbar-default bootsnav navbar-fixed black no-background" data-spy="affix" data-offset-top="10">
+                <div class="container">  
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#brand">
+                            <img src="icon.png" alt="" style="width: 120px; height: 60px;">
+                        </a>
+                    </div>
+                    
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active scroll"><a href="#home" data-scroll>首頁</a></li>
+                            <li class="scroll"><a href="#about" data-scroll>關於我</a></li>
+                            <li class="scroll"><a href="#portfolio" data-scroll>作品集</a></li>
+                            <li class="scroll"><a href="#choose" data-scroll>專業技能</a></li>
+                            <li class="scroll"><a href="#contact" data-scroll>聯絡方式</a></li>
+                        </ul>
+                    </div>
+                </div>   
+            </nav>
+
+
+            <section id="home" class="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_home">
+                            <!-- 圖片區域 -->
+                            <div class="col-sm-6">
+                                <div class="home-shadow text-center">
+                                    <img src="assets/images/me.png" alt="" style="width: 120%; display: block; margin: 0 auto; position: absolute; top: -150px; left: 100%; transform: translateX(-50%);">
+
+                                </div>
+                            </div>
+                            <!-- 文字區域 -->
+                            <div class="col-sm-6">
+                                <div style="display: grid; place-items: center; row-gap: 20px;">
+                                    <h1 style="color: white;font-family: 'SHPinscher', monospace;">⇦This is my resume</h1>
+                                    <h1 style="color: rgba(255, 255, 255, 0);font-family: 'SHPinscher', monospace;">|</h1>
+
+                                  </div>
+                                                                     
+                                <a class="mouse-scroll" href="#about"> 
+                                    <span class="mouse">
+                                        <span class="mouse-movement"></span>
+                                    </span>
+                                    <span class="mouse-message fadeIn">scroll</span> 
+                                    <span class="click-me-text">click me</span> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!--About Section--> 
+            <section id="about" class="about bg-light roomy-150">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_about">
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="about_content">
+                                    <div class="head_right">
+                                        <h2>About me</h2>
+                                    </div>
+                                    <div class="about_content_text">
+                                        <p>我是陳衍碩，目前就讀於銘傳大學資工系三年級，專長是C++,Python及前後端開發，目前對於前端技術有濃厚興趣，由於畢業專題需要用到網頁設計，
+                                            所以選修了這門課程，平常的興趣是投資，喜歡研究股票、加密貨幣等金融商品。
+                                        
+                                        </p>
+
+                                        <div class="divider1 m-top-10"></div>
+
+                                        <div class="about_content_item m-top-30">
+                                            <h6><i class="fa fa-graduation-cap"></i> Education History</h6>
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-chevron-right"></i>桃園市立陽明高級中等學校</a></li>
+                                                <li><a href=""><i class="fa fa-chevron-right"></i>銘傳大學 資工系</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="about_content_item m-top-20">
+                                            <h6><i class="fa fa-briefcase"></i> Work Experiences</h6>
+                                            <ul>
+                                                <li><i class="fa fa-chevron-right"></i>匠骰子牛肉麵 內場員工</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <!-- 個人資訊表格 -->
+                                        <div class="about_content_item m-top-30">
+                                            <h6><i class="fa fa-user"></i> 個人資訊</h6>
+                                            <div class="personal-info-table">
+                                                <table class="table table-bordered" style="background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                    <tr style="background-color: #e0ecf0;">
+                                                        <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-arrows-v"></i> 身高</th>
+                                                        <td style="border: 1px solid #c9d8dd;">187 cm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-balance-scale"></i> 體重</th>
+                                                        <td style="border: 1px solid #c9d8dd;">80 kg</td>
+                                                    </tr>
+                                                    <tr style="background-color: #e0ecf0;">
+                                                        <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-tint"></i> 血型</th>
+                                                        <td style="border: 1px solid #c9d8dd;">O 型</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-birthday-cake"></i> 生日</th>
+                                                        <td style="border: 1px solid #c9d8dd;">2004 年 1 月 16 日</td>
+                                                    </tr>
+                                                    <tr style="background-color: #e0ecf0;">
+                                                        <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-star"></i> 星座</th>
+                                                        <td style="border: 1px solid #c9d8dd;">摩羯座</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-heart"></i> 興趣</th>
+                                                        <td style="border: 1px solid #c9d8dd;">投資、程式設計、影集、電玩、Podcast</td>
+                                                    </tr>
+                                                    <tr style="background-color: #e0ecf0;">
+                                                        <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-language"></i> 語言</th>
+                                                        <td style="border: 1px solid #c9d8dd;">中文（母語）、英文（尚可）</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-music"></i> 喜愛音樂</th>
+                                                        <td style="border: 1px solid #c9d8dd;">獨立樂團、西洋流行樂、hip-hop</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off col-md-6 -->
+
+                            <div class="col-md-5 col-md-offset-1 sm-m-top-50">
+                                <div class="head_title text-right">
+                                    <h5><span class="divider"></span> my name is Chen Yen Shuo </h5>
+                                </div>
+                                <div class="about_left_item m-top-50">
+                                    <img src="assets/images/about-img1.jpg" alt="" />
+                                </div>
+
+                                <div class="about_socail m-top-50">
+                                    <ul class="list-inline">
+                                        <li><span class="divider"></span></li>社群連結
+                                        <li><a href="https://www.facebook.com/share/1546EpKJUt/?mibextid=wwXIfr"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://github.com/YanShuo0116"><i class="fa fa-github"></i></a></li>
+                                        <li><a href="https://www.instagram.com/wayne75525/"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="https://line.me/ti/p/La8WryF00G"><img src="assets/images/line.png" alt="Line" style="width: 20px; height: 20px;"></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- End off col-md-6 -->
+
+                        </div><!-- End off Main About -->
+
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section><!-- End off About us Section -->
+
+
+
+            <!--Portfolio Section-->
+            <section id="portfolio" class="portfolio bg-white roomy-150">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_portfolio">
+                            <div class="col-md-12">
+                                <div class="portfolio_item">
+                                    <div class="head_title text-center">
+                                        <h5><span class="divider"></span> 我的作品:React結合API實作</h5>
+                                    </div>
+                                    <div class="row m-top-60">
+                                        <div class="col-md-6">
+                                            <div class="portfolio_image wow fadeInLeft" data-wow-duration="1s">
+                                                <div class="image-wrapper">
+                                                    <a href="https://yanshuo0116.github.io/cion_react/" target="_blank">
+                                                        <video width="100%" height="100%" autoplay loop muted playsinline>
+                                                            <source src="assets/images/coin.mp4" type="video/mp4">
+                                                            您的瀏覽器不支援影片播放。
+                                                        </video>
+                                                        <div class="image-overlay">
+                                                            <span class="btn btn-primary">
+                                                                <i class="fa fa-external-link"></i> 前往網站
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="click-hint">click ⇧ me</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="portfolio_content wow fadeInRight" data-wow-duration="1s">
+                                                <div class="portfolio_content_text">
+                                                    <h4 class="wow fadeInUp" data-wow-delay="0.3s">Coin React</h4>
+                                                    <p class="wow fadeInUp" data-wow-delay="0.4s">這是一個使用 React 和 CoinGecko API 製作的加密貨幣資訊網站，提供即時的加密貨幣市場數據和價格資訊，並且可以點擊幣種查看詳細資訊，再配上現代的UI設計，讓使用者有更好的使用體驗。</p>
+                                                    
+                                                    <div class="tech-stack m-top-30 wow fadeInUp" data-wow-delay="0.5s">
+                                                        <h5>使用技術</h5>
+                                                        <ul class="tech-list">
+                                                            <li><i class="fa fa-check-circle"></i>React - 前端 UI 開發</li>
+                                                            <li><i class="fa fa-check-circle"></i>CoinGecko API - 即時加密貨幣數據</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="features m-top-30 wow fadeInUp" data-wow-delay="0.6s">
+                                                        <h5>主要功能</h5>
+                                                        <ul class="feature-list">
+                                                            <li><i class="fa fa-check-circle"></i>即時顯示加密貨幣價格</li>
+                                                            <li><i class="fa fa-check-circle"></i>市場資訊即時更新</li>
+                                                            <li><i class="fa fa-check-circle"></i>點擊幣種查看詳細資訊</li>
+                                                            <li><i class="fa fa-check-circle"></i>響應式設計，支援各種設備</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!--Choose Section-->
+            <section id="choose" class="choose bg-light roomy-150">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_choose">
+                            <div class="col-md-5">
+                                <div class="choose_item">
+                                    <div class="head_right">
+                                        <h2>我的技能</h2>
+                                    </div>
+                                    
+                                    <div class="choose_item_text">
+                                        <br><br><br>
+                                        <p>身為銘傳大學資工系的學生，我專注於前端開發和全端應用程式的開發。我熱愛程式設計，特別是在網頁開發領域，正在學習使用 React 等現代前端框架，並且對加密貨幣和金融科技有濃厚的興趣。</p>
+                                        <p>除了技術能力外，我也具備良好的團隊合作精神和溝通能力，能夠有效地與團隊成員協作完成專案。</p>
+                                    </div>
+                                    
+                                    <!-- 技能表格 -->
+                                    <div class="skills-table m-top-50 wow fadeInUp" data-wow-delay="0.4s">
+                                        <h4 class="text-center m-bottom-30">技能評級</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>技能類別</th>
+                                                        <th>熟練度</th>
+                                                        <th>說明</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="wow fadeInLeft" data-wow-delay="0.2s">
+                                                        <td><i class="fa-brands fa-html5"></i> HTML</td>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>精通現代網頁開發技術</td>
+                                                    </tr>
+                                                    <tr class="wow fadeInLeft" data-wow-delay="0.4s">
+                                                        <td><i class="fa-brands fa-react"></i> React</td>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>熟練使用 React 框架開發</td>
+                                                    </tr>
+                                                    <tr class="wow fadeInLeft" data-wow-delay="0.6s">
+                                                        <td><i class="fa-brands fa-python"></i> Python</td>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>具備 Python 程式設計能力</td>
+                                                    </tr>
+                                                    <tr class="wow fadeInLeft" data-wow-delay="0.8s">
+                                                        <td><i class="fa-solid fa-code"></i> C++</td>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>具備 C++ 程式設計基礎</td>
+                                                    </tr>
+                                                    <tr class="wow fadeInLeft" data-wow-delay="1s">
+                                                        <td><i class="fa-solid fa-database"></i> 資料庫</td>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>了解資料庫設計和操作</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-md-offset-1 sm-m-top-50">
+                                <h4 class="text-center m-bottom-30 wow fadeInUp" data-wow-delay="0.2s">專業領域</h4>
+                                <div class="choose_list">
+                                    <div class="choose_list_item">
+                                        <div class="hover-circle"></div>
+                                        <div class="choose_icon">
+                                            <i class="fa-solid fa-code"></i>
+                                        </div>
+                                        <div class="list_item_text">
+                                            <h5>前端開發</h5>
+                                            <p>精通 HTML5、CSS3、JavaScript，擅長使用 React 框架開發現代化網頁應用程式。注重使用者體驗和響應式設計。</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="choose_list_item">
+                                        <div class="hover-circle"></div>
+                                        <div class="choose_icon">
+                                            <i class="fa-solid fa-database"></i>
+                                        </div>
+                                        <div class="list_item_text">
+                                            <h5>後端開發</h5>
+                                            <p>具備 Python 和 C++ 程式設計能力，了解資料庫設計和 API 開發。能夠開發穩定且高效的後端系統。</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="choose_list_item">
+                                        <div class="hover-circle"></div>
+                                        <div class="choose_icon">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                        </div>
+                                        <div class="list_item_text">
+                                            <h5>金融科技</h5>
+                                            <p>對加密貨幣和金融科技有深入興趣，具備相關知識和實作經驗。能夠開發金融相關的應用程式。</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="choose_list_item">
+                                        <div class="hover-circle"></div>
+                                        <div class="choose_icon">
+                                            <i class="fa-solid fa-users"></i>
+                                        </div>
+                                        <div class="list_item_text">
+                                            <h5>團隊合作</h5>
+                                            <p>擅長團隊協作，溝通能力強，能夠與不同崗位的夥伴高效合作。注重專案管理與版本控制。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choose_btn text-center m-top-50">
+                            <a href="#contact" class="btn btn-primary">與我合作</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+            <!--Contact Section-->
+            <section id="contact" class="contact bg-white roomy-150">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_contact">
+                            <div class="head_title">
+                                <h5><span class="divider"></span>聯絡我</h5>
+                            </div>
+                            <div class="col-md-5">
+                                <form class="m-top-50">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="你的名字">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="你的Email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>專案類型</option>
+                                            <option>網頁製作</option>
+                                            <option>後端演算法</option>
+                                            <option>API串接</option>
+                                            <option>其他</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="5" placeholder="你的訊息"></textarea>
+                                    </div>
+                                    <div class="form_btn text-right m-top-50">
+                                        <button type="submit" class="btn btn-primary">發送</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1 sm-m-top-50">
+                                <div class="contact_content">
+                                    <div class="head_right">
+                                        <h2>聯絡我</h2>
+                                    </div>
+
+                                    <div class="contact_content_text">
+                                        <p>如果有需要可以用下面資訊聯絡我</p>
+
+                                        <ul class="m-top-50">
+                                            <li class="phone">手機號碼:0906566386</li>
+                                            <li class="info">E-mail:11360563@me.mcu.edu.tw</li>
+                                        </ul>
+
+                                        <div class="author_text text-right">
+                                            <h5>祝您順心！</h5>
+                                            <h1>陳衍碩</h1>
+                                            <h6>資工系學生</h6>
+                                        </div>
+                                        <div class="copyright text-right m-top-80">
+                                            <p class="wow fadeInRight">Made with <i class="fa fa-heart"></i> by <a href="https://bootstrapthemes.co">chen yan shuo</a>2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+        </div>
+
+        <!-- JS includes -->
+
+        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="assets/js/jquery.magnific-popup.js"></script>
+        <script src="assets/js/jquery.easing.1.3.js"></script>
+        <script src="assets/js/bootsnav.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            new WOW().init();
+            
+            // 添加平滑滾動
+            $(document).ready(function() {
+                // 平滑滾動
+                $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html, body').animate({
+                                scrollTop: (target.offset().top - 70)
+                            }, 1000, 'easeInOutExpo');
+                            return false;
+                        }
+                    }
+                });
+
+                // 監聽滾動事件來更新活動項目
+                $(window).scroll(function() {
+                    var scrollDistance = $(window).scrollTop();
+                    
+                    // 檢查每個部分的位置
+                    $('section').each(function(i) {
+                        if ($(this).position().top <= scrollDistance + 100) {
+                            $('.nav.navbar-nav li.active').removeClass('active');
+                            $('.nav.navbar-nav li').eq(i).addClass('active');
+                        }
+                    });
+                }).scroll();
+            });
+        </script>
+
+
+    </body>
+</html>
