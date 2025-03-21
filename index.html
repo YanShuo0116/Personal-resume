@@ -54,6 +54,47 @@
                 align-items: center !important;
                 justify-content: center !important;
             }
+
+            /* 新增響應式設計 */
+            @media (max-width: 768px) {
+                .home-shadow {
+                    position: relative;
+                    height: auto;
+                    margin-bottom: 30px;
+                }
+                
+                .home-shadow img {
+                    position: relative !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    transform: none !important;
+                    width: 100% !important;
+                    max-width: 300px !important;
+                    margin: 0 auto !important;
+                    display: block !important;
+                }
+
+                .skills-table {
+                    overflow-x: auto !important;
+                }
+
+                .skills-table table {
+                    min-width: 100% !important;
+                }
+
+                .skills-table td {
+                    white-space: normal !important;
+                    min-width: 80px !important;
+                }
+
+                .progress {
+                    min-width: 100px !important;
+                }
+
+                .table-responsive {
+                    border: none !important;
+                }
+            }
         </style>
 
         <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -115,13 +156,12 @@
                             <div class="col-sm-6">
                                 <div class="home-shadow text-center">
                                     <img src="assets/images/me.png" alt="" style="width: 120%; display: block; margin: 0 auto; position: absolute; top: -150px; left: 100%; transform: translateX(-50%);">
-
                                 </div>
                             </div>
                             <!-- 文字區域 -->
                             <div class="col-sm-6">
                                 <div style="display: grid; place-items: center; row-gap: 20px;">
-                                    <h1 style="color: white;font-family: 'SHPinscher', monospace;">⇦This is my resume</h1>
+                                    <h1 style="color: white;font-family: 'SHPinscher', monospace;">This is my resume</h1>
                                     <h1 style="color: rgba(255, 255, 255, 0);font-family: 'SHPinscher', monospace;">|</h1>
 
                                   </div>
