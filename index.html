@@ -568,30 +568,31 @@
                                 <h5><span class="divider"></span>聯絡我</h5>
                             </div>
                             <div class="col-md-5">
-                                <form class="m-top-50">
+                                <form class="m-top-50" action="https://formspree.io/f/mgvalorn" method="POST">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="你的名字">
+                                        <input type="text" class="form-control" name="name" placeholder="你的名字" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="你的Email">
+                                        <input type="email" class="form-control" name="email" placeholder="你的Email" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <select class="form-control">
-                                            <option>專案類型</option>
-                                            <option>網頁製作</option>
-                                            <option>後端演算法</option>
-                                            <option>API串接</option>
-                                            <option>其他</option>
+                                        <select class="form-control" name="project_type" required>
+                                            <option value="">專案類型</option>
+                                            <option value="web">網頁製作</option>
+                                            <option value="backend">後端演算法</option>
+                                            <option value="api">API串接</option>
+                                            <option value="other">其他</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="5" placeholder="你的訊息"></textarea>
+                                        <textarea class="form-control" name="message" rows="5" placeholder="你的訊息" required></textarea>
                                     </div>
                                     <div class="form_btn text-right m-top-50">
                                         <button type="submit" class="btn btn-primary">發送</button>
                                     </div>
                                 </form>
+                                <div id="form-status" class="m-top-20"></div>
                             </div>
                             <div class="col-md-6 col-md-offset-1 sm-m-top-50">
                                 <div class="contact_content">
@@ -673,6 +674,36 @@
                         }
                     });
                 }).scroll();
+
+                // 表單提交處理
+                $('form').on('submit', function(e) {
+                    e.preventDefault();
+                    var form = $(this);
+                    var submitBtn = form.find('button[type="submit"]');
+                    var statusDiv = $('#form-status');
+                    
+                    // 禁用提交按鈕
+                    submitBtn.prop('disabled', true);
+                    submitBtn.text('發送中...');
+                    
+                    $.ajax({
+                        url: form.attr('action'),
+                        method: 'POST',
+                        data: form.serialize(),
+                        dataType: 'json',
+                        success: function(response) {
+                            statusDiv.html('<div class="alert alert-success">訊息已成功發送！我會盡快回覆您。</div>');
+                            form[0].reset();
+                        },
+                        error: function(err) {
+                            statusDiv.html('<div class="alert alert-danger">發送失敗，請稍後再試。</div>');
+                        },
+                        complete: function() {
+                            submitBtn.prop('disabled', false);
+                            submitBtn.text('發送');
+                        }
+                    });
+                });
             });
         </script>
 
