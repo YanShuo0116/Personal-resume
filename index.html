@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="assets/css/magnific-popup.css">
         <link rel="stylesheet" href="assets/css/bootsnav.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <!-- 興趣頁面樣式 -->
+        <link rel="stylesheet" href="assets/css/interests.css">
 
         <!-- 修復圖標和進度條樣式 -->
         <style>
@@ -241,17 +243,14 @@
                                                         <td style="border: 1px solid #c9d8dd;">摩羯座</td>
                                                     </tr>
                                                     <tr>
-                                                        <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-heart"></i> 興趣</th>
-                                                        <td style="border: 1px solid #c9d8dd;">投資、程式設計、影集、電玩、Podcast</td>
+                                                        <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-heart"></i> 喜愛音樂</th>
+                                                        <td style="border: 1px solid #c9d8dd;">獨立樂團、西洋流行樂、hip-hop</td>
                                                     </tr>
                                                     <tr style="background-color: #e0ecf0;">
                                                         <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-language"></i> 語言</th>
                                                         <td style="border: 1px solid #c9d8dd;">中文（母語）、英文（尚可）</td>
                                                     </tr>
-                                                    <tr>
-                                                        <th style="width: 30%; text-align: center; border: 1px solid #c9d8dd;"><i class="fa fa-music"></i> 喜愛音樂</th>
-                                                        <td style="border: 1px solid #c9d8dd;">獨立樂團、西洋流行樂、hip-hop</td>
-                                                    </tr>
+
                                                 </table>
                                             </div>
                                         </div>
@@ -284,10 +283,44 @@
                 </div><!-- End off container -->
             </section><!-- End off About us Section -->
 
+            <!--About Section--> 
+            <section id="about" class="about bg-white roomy-150">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_about">
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="about_content">
+                                    <div class="head_right">
+                                        <h2>---Interests</h2>
+                                    </div>
+                                    <div class="about_content_text">
+                                        <p>這是我的各種興趣，點擊各個興趣卡片可以查看更多詳情</p>
+                                        
+                                    </div>
+                                </div>
+                            </div><!-- End off col-md-6 -->
 
+                            <div class="col-md-5 col-md-offset-1 sm-m-top-50">
+                                <div class="head_title text-right">
+                                    <h5><span class="divider"></span>These are my interests </h5>
+                                </div>
+                            </div><!-- End off col-md-6 -->
+                        </div><!-- End off Main About -->
+                    </div><!-- End off row -->
+
+                    <!-- 興趣卡片容器 -->
+                    <div class="row m-top-50">
+                        <div class="col-md-12">
+                            <div id="interests-container" class="row">
+                                <!-- 興趣卡片將由 JavaScript 動態生成 -->
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End off container -->
+            </section><!-- End off About us Section -->
 
             <!--Portfolio Section-->
-            <section id="portfolio" class="portfolio bg-white roomy-150">
+            <section id="portfolio" class="portfolio bg-light roomy-150">
                 <div class="container">
                     <div class="row">
                         <div class="main_portfolio">
@@ -707,6 +740,11 @@
             });
         </script>
 
+        <!-- 引入 Three.js 相關腳本 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.min.js"></script>
+        <!-- 引入興趣頁面腳本 -->
+        <script src="assets/js/interests/interests.js"></script>
 
     </body>
 </html>
