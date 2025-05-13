@@ -1,0 +1,551 @@
+/* 興趣頁面樣式
+ * 作者: 陳衍碩
+ */
+
+/* 興趣容器 */
+#interests-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 興趣卡片 */
+.interest-card {
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    perspective: 1000px;
+    width: 33.333%; /* 電腦版三欄 */
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.interest-inner {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    height: 360px; /* 更高的卡片 */
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.interest-card:hover .interest-inner {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* 模型容器 */
+.model-container {
+    height: 280px; /* 更大的模型容器 */
+    position: relative;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f0fa 100%); /* 更亮的背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 標題 */
+.interest-card h4 {
+    padding: 18px;
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    font-size: 20px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+/* 覆蓋層 */
+.interest-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.interest-card:hover .interest-overlay {
+    opacity: 1;
+}
+
+.view-details {
+    padding: 12px 25px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.interest-card:hover .view-details {
+    transform: translateY(0);
+}
+
+/* 模態框 - 全屏式設計 */
+.interest-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85); /* 更深的背景顏色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.interest-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.interest-modal.show .modal-content {
+    transform: translateY(0);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 返回按鈕 */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1100;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+/* 關閉按鈕樣式調整 */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 20; /* 提高層級以確保可見 */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+}
+
+.interest-modal h3 {
+    padding: 25px;
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.interest-modal h3:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+}
+
+/* 輪播容器 */
+.fullscreen-carousel {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 180px);
+    z-index: 5;
+    overflow: hidden;
+}
+
+/* 輪播軌道 */
+.carousel-track {
+    display: flex;
+    width: 1000%; /* 10張圖片，每張佔10% */
+    height: 100%;
+    position: relative;
+    animation: slideshow 30s linear infinite; /* 更慢 */
+}
+
+/* 輪播項目 */
+.carousel-item {
+    width: 10%; /* 10張圖片，每張佔10% */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* 略微加深背景 */
+    position: relative;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 影片樣式 */
+.carousel-item video {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+/* GIF圖片特殊樣式 */
+.carousel-item .gif-image {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+}
+
+/* 滑動動畫 */
+@keyframes slideshow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* 只需滑動一半 */
+    }
+}
+
+/* 興趣描述 - 調整位置以配合全螢幕輪播 */
+.interest-description {
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    max-height: 150px; /* 增加描述的高度以顯示更多文字 */
+    overflow-y: auto; /* 超出部分可滾動 */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: max-height 0.3s ease;
+}
+
+.interest-description p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* 增加描述區域的滾動條樣式 */
+.interest-description::-webkit-scrollbar {
+    width: 8px;
+}
+
+.interest-description::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.interest-description::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.interest-description::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* 描述區域懸停時擴展 */
+.interest-description:hover {
+    max-height: 220px;
+}
+
+/* 音樂播放器樣式 */
+.music-player {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+}
+
+.music-info {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* 調整輪播項目以顯示音樂按鈕 */
+.carousel-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    max-width: 80%;
+    max-height: 75%;
+    margin-bottom: 50px; /* 為按鈕留出空間 */
+}
+
+/* 輪播圓點指示器 */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .dot.active {
+    background-color: #fff;
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* 動態背景效果 */
+.carousel:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 響應式設計 */
+@media (max-width: 1200px) {
+    .carousel {
+        height: 450px;
+    }
+}
+
+@media (max-width: 992px) {
+    .interest-inner {
+        height: 340px;
+    }
+    
+    .model-container {
+        height: 260px;
+    }
+    
+    .carousel {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    #interests-container {
+        padding: 0 10px;
+    }
+    
+    .interest-card {
+        width: 50%; /* 手機版兩欄 */
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+    
+    .interest-inner {
+        height: 320px;
+    }
+    
+    .model-container {
+        height: 240px;
+    }
+    
+    .carousel {
+        height: 350px;
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+    
+    .interest-modal h3 {
+        font-size: 22px;
+        padding: 20px;
+    }
+    
+    .interest-description p {
+        font-size: 16px;
+    }
+    
+    /* 確保手機版是 2x3 佈局 */
+    .interest-card:nth-child(odd) {
+        clear: left;
+    }
+    
+    .back-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        top: 15px;
+        left: 15px;
+    }
+    
+    .play-button {
+        min-width: 120px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .audio-control {
+        bottom: 70px;
+        right: 20px;
+    }
+    
+    .carousel-item img {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    .interest-inner {
+        height: 300px;
+    }
+    
+    .model-container {
+        height: 220px;
+    }
+    
+    .carousel {
+        height: 300px;
+    }
+    
+    .carousel-indicators {
+        bottom: 10px;
+    }
+    
+    .carousel-indicators .dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+    }
+}
+
+/* 按鈕樣式 */
+.btn-primary {
+    background: linear-gradient(to right, #4a90e2, #5ca9fb);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #357abd, #4a90e2);
+    transform: scale(1.05);
+}
+
+/* 旋轉動畫 */
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* 添加YouTube播放器樣式 */
+.youtube-player {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.youtube-player iframe {
+    border-radius: 8px;
+} 
