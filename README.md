@@ -1,6 +1,7 @@
 # 個人履歷網站特色效果
 
 本文檔記錄了個人履歷網站中使用的特色JavaScript和CSS效果，展示網站的互動性和視覺設計。
+訪問網站：[https://yanshuo0116.github.io/Personal-resume/](https://yanshuo0116.github.io/Personal-resume/)
 
 ## 特色JavaScript效果
 
