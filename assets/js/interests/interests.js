@@ -19,7 +19,7 @@ const interestsConfig = [
         model: 'bitcoin.glb',
         images: [
             './assets/images/interests/invest/1.jpg',
-            './assets/images/interests/invest/2.jpg',
+            './assets/images/interests/invest/2.JPG',
             './assets/images/interests/invest/3.jpg',
             './assets/images/interests/invest/4.jpg',
             './assets/images/interests/invest/5.jpg'
@@ -31,11 +31,11 @@ const interestsConfig = [
         title: '程式',
         model: 'macbook.glb',
         images: [
-            './assets/images/interests/coding/1.gif',
-            './assets/images/interests/coding/2.gif',
-            './assets/images/interests/coding/3.jpg',
-            './assets/images/interests/coding/4.jpg',
-            './assets/images/interests/coding/5.jpg'
+            './assets/images/interests/coding/1.GIF',
+            './assets/images/interests/coding/2.GIF',
+            './assets/images/interests/coding/3.JPG',
+            './assets/images/interests/coding/4.JPG',
+            './assets/images/interests/coding/5.JPG'
         ],
         description: '我常會寫一些沒什麼用但很好玩的小工具，像是自動化、聊天機器人或是奇怪的遊戲，重點是要有趣、有成就感。'
     },
@@ -44,11 +44,10 @@ const interestsConfig = [
         title: '電玩',
         model: 'Xbox.glb',
         images: [
-            './assets/images/interests/gaming/1.jpg',
-            './assets/images/interests/gaming/2.jpg',
-            './assets/images/interests/gaming/3.jpg',
-            './assets/images/interests/gaming/4.jpg',
-            './assets/images/interests/gaming/5.jpg'
+            './assets/images/interests/gaming/1.JPG',
+            './assets/images/interests/gaming/2.JPG',
+            './assets/images/interests/gaming/4.JPG',
+            './assets/images/interests/gaming/5.JPG'
         ],
         description: '2K是日常運動，日系 RPG 是我最愛買的最近大推《光與影：33號遠征隊》。也愛玩像《爐石》這種卡牌對戰遊戲，《潛水員戴夫》、《小丑牌》這種有創意的獨立遊戲。'
     },
@@ -57,11 +56,11 @@ const interestsConfig = [
         title: '音樂',
         model: 'music.glb',
         images: [
-            './assets/images/interests/music/1.jpg',
-            './assets/images/interests/music/2.jpg',
-            './assets/images/interests/music/3.jpg',
-            './assets/images/interests/music/4.jpg',
-            './assets/images/interests/music/5.jpg'
+            './assets/images/interests/music/1.JPG',
+            './assets/images/interests/music/2.JPG',
+            './assets/images/interests/music/3.JPG',
+            './assets/images/interests/music/4.JPG',
+            './assets/images/interests/music/5.JPG'
         ],
         description: '喜歡台灣的獨立音樂圈，落日飛車、怕胖團是常駐播放。也喜歡嘻哈像是 Kendrick Lamar 超頂、還有Post Malone 和Chris Brown那種氛圍系，也都愛聽。',
         youtubePlaylist: 'https://www.youtube.com/embed/videoseries?list=PL4fGSI1pDJn5kI81J1fYWK5eZRl1zJ5kM' // YouTube播放清單嵌入連結
@@ -71,11 +70,11 @@ const interestsConfig = [
         title: '追劇',
         model: 'popcorn.glb',
         images: [
-            './assets/images/interests/drama/1.jpg',
-            './assets/images/interests/drama/2.jpg',
-            './assets/images/interests/drama/3.jpg',
-            './assets/images/interests/drama/4.jpg',
-            './assets/images/interests/drama/5.jpg'
+            './assets/images/interests/drama/1.JPG',
+            './assets/images/interests/drama/2.JPG',
+            './assets/images/interests/drama/3.JPG',
+            './assets/images/interests/drama/4.JPG',
+            './assets/images/interests/drama/5.JPG'
         ],
         description: '劇齡豐富，愛看那種劇情燒腦、角色立體的作品。像《絕命毒師》、《怪奇物語》、《紙房子》、《黑鏡》、《三體》這類的，都是我會一口氣追爆的類型。'
     },
@@ -84,9 +83,9 @@ const interestsConfig = [
         title: '籃球',
         model: 'basketball.glb',
         images: [
-            'assets/images/interests/basketball/1.JPG',
-            './assets/images/interests/basketball/2.jpg',
-            './assets/images/interests/basketball/3.jpg',
+            './assets/images/interests/basketball/1.JPG',
+            './assets/images/interests/basketball/2.JPG',
+            './assets/images/interests/basketball/3.JPG',
             './assets/images/interests/basketball/4.jpg',
             './assets/images/interests/basketball/5.mp4'
         ],
