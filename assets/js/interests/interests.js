@@ -84,7 +84,7 @@ const interestsConfig = [
         title: '籃球',
         model: 'basketball.glb',
         images: [
-            './assets/images/interests/basketball/1.jpg',
+            'assets/images/interests/basketball/1.JPG',
             './assets/images/interests/basketball/2.jpg',
             './assets/images/interests/basketball/3.jpg',
             './assets/images/interests/basketball/4.jpg',
